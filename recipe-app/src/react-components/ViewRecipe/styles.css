@@ -1,0 +1,206 @@
+.ViewRecipe{ 
+    min-height: 100vh;
+   background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+  }
+  .search-form{
+    min-height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .search-bar{
+    width: 50%;
+    border:none;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 5px 10px #979b91;
+  }
+  .search-button{
+    background: #4da1ab;
+    border: 5px solid white;
+    border-radius: 8px;
+    padding: 10px 20px;
+    color: white;
+    font-size: larger;
+    margin: 0 0 0 10px;
+  } 
+  .search-button:hover {
+    background-color:#fa709a ;
+  }
+  .recipes{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .Title{
+    display: flex;
+    font-weight: bold;
+    justify-content: center;
+    /* font-size: 70px; */
+    font: 900 45px Raleway;
+    text-transform: uppercase;
+    margin: 40px 0 5px;
+    letter-spacing: 2px;
+    color: #13547a;
+    /* opacity: unset; */
+    /* position: relative; */
+    
+    
+  }
+  .createdBy {
+    display: flex;
+    justify-content: center;
+    /* align-content: center; */
+    flex-wrap: wrap;
+    /* font-size: 20px; */
+    font: 400 20px Raleway;
+    color: #13547a;
+    margin-top: 20px;
+  }
+  .createdOn {
+    display: flex;
+    justify-content: center;
+    /* align-content: center; */
+    flex-wrap: wrap;
+    /* font-size: 20px; */
+    font: 400 20px Raleway;
+    color: #13547a;
+    margin-bottom: 20px;
+  }
+
+  .amd{
+    justify-content: space-evenly;
+    display: inline-flex; 
+    margin-left: 5px;
+     
+  }
+  .Servingsize{
+      align-self: center;
+      display: flex;
+    justify-content: left;
+    /* align-content: center; */
+    flex-wrap: wrap;
+    /* font: 400 20px Raleway;
+
+    margin-left: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px; */
+        font: 400 20px Raleway;
+        color: #13547a;
+        margin: 20px;
+  }
+  .Servingsizeinsert{
+   
+      font: 400 16px Raleway;
+      color: #000000;
+      /* margin: 20px; */
+  }
+ .ingredients{
+    
+    font: 400 30px Raleway;
+    color: #13547a;
+    margin: 20px;
+    margin-bottom: 30px;
+     
+     
+ }
+ .ingredients-list{
+    display: flex;
+    font: 400 16px Raleway;
+    color: #000000;
+    margin-top: 10px;
+    margin-left: 20px;
+    /* margin: 10px; */
+    letter-spacing: 1px;
+}
+.ingredients-list-name{
+    display: flex;
+    font: 400 16px Raleway;
+    color: #000000;
+    /* margin-top: 10px; */
+    margin-left: 20px;
+    /* margin: 10px; */
+    letter-spacing: 1px;
+}
+.instruction-title{
+    display: flex;
+    font: 400 30px Raleway;
+    color: #13547a;
+    /* margin-top: 10px; */
+    margin-left: 20px;
+    justify-content: center;
+    /* margin: 10px; */
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+.instructions{
+    display: flex;
+    font: 400 20px Raleway;
+    color: #000000;
+    margin-top: 5px;
+    margin-left: 20px;
+    /* margin: 10px; */
+    letter-spacing: 1px;
+    justify-self: center;
+    justify-content: center;
+}
+
+.bio{
+    overflow: auto;
+    min-height: 1px;
+    border-bottom: 1px solid grey;
+    width: 10px;
+}
+.RecipePage{
+    position: relative; 
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('https://placekitten.com/1200/800');
+    background-size: cover;
+}
+.RecipePage::before{
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(0,0,0,0.25);
+}
+.card{
+    /* justify-content: center; */
+    /* float: right; */
+    /* position: ; */
+    margin: auto;
+    /* display: flex; */
+    /* height: 200px; */
+    /* text-align: center; */
+    box-sizing: border-box;
+
+}
+.card .image{
+    /* margin-right: 10px; */
+    /* margin-block-end: 10px; */
+    /* max-width: 10%; 
+     max-height: 100px;
+    border-radius: 8px; */
+    /* height: auto; */
+    /* margin-left: auto;
+    margin-right: auto; */
+    /* width: 100%;
+    height: 10%; */
+    /* display: flex; */
+    /* opacity: 0.2; */
+    /* align-items: right; */
+    width: 200px;
+    border-radius: 50%;
+    border: 1px solid white;
+    margin: 10px;
+    float: left;
+
+}
+

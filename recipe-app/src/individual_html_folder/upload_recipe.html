@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>upload recipe</title>
+    
+    
+    <style>
+        body{
+            background-image: url("background.jpg");
+        }
+
+                
+        a {
+        text-decoration: none;
+        display: inline-block;
+        padding: 8px 16px;
+        }
+
+        a:hover {
+        background-color: #ddd;
+        color: black;
+        }
+
+        .previous_button {
+        background-color: #f1f1f1;
+        color: black;
+        border-radius: 6px;
+        margin: 4em;
+        
+        }
+
+        .next_button {
+        background-color: #f1f1f1;
+        color: black;
+        border-radius: 6px;
+        margin: 4em;
+        
+        
+        }
+
+        .finish_button {
+        background-color: #f1f1f1;
+        color: black;
+        border-radius: 6px;
+        margin: 4em;
+        
+        }
+
+        .upload_steps{
+            width: 50%;
+            height: 60em;
+            background-color: rgb(218, 237, 255);
+            margin: auto;
+            opacity: 0.8;
+            border-radius: 5em;
+            padding: 5em;
+            text-align:center
+
+        }
+
+        .title{
+            margin-left: auto;
+            font-family: "Lucida Handwriting";
+
+        }
+
+
+        /* ================================================================== */
+        .form__group {
+  position: relative;
+  padding: 15px 0 0;
+  margin-top: 10px;
+  width: 50%;
+  margin: auto;
+}
+
+.form__field {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid gray;
+  outline: 0;
+  font-size: 1.3rem;
+  color: rgb(0, 0, 0);
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+
+
+}
+
+.form__field::placeholder {
+    color: transparent;
+  }
+  
+  .form__field:placeholder-shown ~ .form__label {
+    font-size: 1.3rem;
+    cursor: text;
+    top: 20px;
+  }
+
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: grey
+}
+
+.form__field:focus {
+
+  padding-bottom: 6px;  
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(to right, green,blue);
+  border-image-slice: 1;
+}
+
+
+.form__label:focus {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: green;
+    font-weight:700;    
+  }
+/* reset input */
+.form__field:required{
+  box-shadow:none; 
+}
+.form__field:required:invalid{
+    box-shadow:none; 
+  }
+/* demo */
+body {
+  font-family: 'Poppins', sans-serif; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-size: 1.5rem;
+  background-color:#222222;
+}
+
+
+
+
+
+
+    </style>
+
+
+    <!-- react -->
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+
+
+    <div class="upload_steps">
+        <!-- this page is for recipe name -->
+        <h1 class = "title">Recipe Name</h1>
+
+        <div class="form__group field" >
+            <input type="input" class="form__field" placeholder="Name of this recipe" name="name" id='recipe_name' required />
+            <label for="name" class="form__label">Name</label>
+          </div>
+
+          <div class="form__group field" >
+            <input type="input" class="form__field" placeholder="Name of this recipe" name="name" id='serving_size' required />
+            <label for="name" class="form__label">serving size</label>
+          </div>
+
+
+        
+    <div>
+        <a href="#" class="next_button">Next &raquo;</a>
+    </div>
+    </div>
+
+
+
+    <div class="upload_steps">
+        <!-- this page is for ingredient -->
+        <h1 class = "title">ingredients</h1>
+        <div id="ingredients_container">
+            <div class="ingredient">
+                <input type="text" class = "ingredientName" placeholder = "ingredient" > 
+
+                
+                <input type="text" class = "ingredientAmount" placeholder = "amount" > 
+                
+                <input type="button" class="deleteIngredient" value="remove this ingredient">
+            </div>
+            <div class="ingredient">
+                <input type="text" class = "ingredientName" placeholder = "ingredient" > 
+                <input type="text" class = "ingredient_amount" placeholder = "amount" > 
+                <input type="button" class="deleteIngredient" value="remove this ingredient">
+
+            </div>
+            
+        </div>
+        <input type="button" class="addIngredient" value="add new ingredient">
+    
+    <div>
+        <a href="#" class="previous_button">&laquo; Previous</a>
+        <a href="#" class="next_button">Next &raquo;</a>
+
+    </div>
+    
+    </div>
+
+
+
+    <div class="upload_steps">
+        <!-- this page is for recipe procedure -->
+        <h1 class = "title">recipe procedure</h1>
+        <div id="step_container">
+            <div class = "step">
+                <input type="text" class = "recipe_procedure"  >
+                <input type="button" class="deleteStep" value="remove this step">
+            </div>
+            <div class = "step">
+                <input type="text" class = "recipe_procedure"  >
+                <input type="button" class="deleteStep" value="remove this step">
+            </div>
+            <div class = "step">
+                <input type="text" class = "recipe_procedure" >
+                <input type="button" class="deleteStep" value="remove this step">
+            </div>
+        </div>
+        <input type="button" class="addStep" value="add a new step">
+
+    
+
+        <div>
+            <a href="#" class="previous_button">&laquo; Previous</a>
+            <a href="#" class="next_button">Next &raquo;</a>
+
+        </div>
+    </div>
+
+    <div class="upload_steps">
+        <!-- this page is for recipe procedure -->
+        <h1 class = "title">Cooking tips</h1>
+
+        <div class="form__group field" >
+            <input type="input" class="form__field" placeholder="Name of this recipe" name="name" id='cooking_tips'  required />
+            <label for="name" class="form__label">cooking tips</label>
+          </div>
+
+    
+
+        <div>
+            <a href="#" class="previous_button">&laquo; Previous</a>
+            <a href="#" class = "finish_button">Finish</a>
+        </div>
+    </div>
+    <div id="mydiv"></div>
+
+
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- my classes -->
+    <script type="text/javascript" src="main_class.js"></script>
+
+
+    <script type="text/babel">
+        const printf = console.log;
+        var current_upload_step = 0;
+        var this_recipe = new Recipe();
+        $(".upload_steps").eq(current_upload_step).show().siblings().hide();
+
+
+        $(".next_button").click(function(){
+            current_upload_step += 1;
+            $(".upload_steps").eq(current_upload_step).show().siblings().hide();
+        })
+
+
+        $(".previous_button").click(function(){
+            current_upload_step -= 1;
+            $(".upload_steps").eq(current_upload_step).show().siblings().hide();
+        })
+
+
+        $(document).on("click", ".deleteIngredient", function(e){
+            document.querySelector("#ingredients_container").removeChild(e.target.parentElement);
+        })
+
+
+        $(".addIngredient").click(function(e){
+            //create a ingredient-amount div and append it to the list.
+            let this_ingredient = document.createElement("div");
+            this_ingredient.className = "ingredient";
+            let first_child = document.createElement("input");
+            first_child.type = "text";
+            first_child.className = "ingredientName"
+            first_child.placeholder = "ingredient";
+            let second_child = document.createElement("input");
+            second_child.type = "text";
+            second_child.className = "ingredientAmount"
+            second_child.placeholder = "amount";
+            second_child.appendChild(first_child);
+            let third_child = document.createElement("input");
+            third_child.type = "button";
+            third_child.className = "deleteIngredient"
+            third_child.value = "remove this ingredient";
+            this_ingredient.appendChild(first_child);
+            this_ingredient.appendChild(second_child);
+            this_ingredient.appendChild(third_child);
+            document.querySelector("#ingredients_container").appendChild(this_ingredient);
+        })
+
+
+        function markStepNumber(){
+            //add place holder number to each recipe procedure.
+            for(let i = 0; i < $(".step").length; i += 1){
+                $(".recipe_procedure").eq(i).attr("placeholder", "step " + (i+1).toString())
+            }
+        }
+        markStepNumber()
+
+
+        $(document).on("click", ".deleteStep", function(e){
+            document.querySelector("#step_container").removeChild(e.target.parentElement);
+            markStepNumber()
+        })
+
+
+        $(".addStep").click(function(e){
+            //create a ingredient-amount div and append it to the list.
+            let this_step = document.createElement("div");
+            this_step.className = "step";
+            let first_child = document.createElement("input");
+            first_child.type = "text";
+            first_child.className = "recipe_procedure"
+            let second_child = document.createElement("input");
+            second_child.type = "button";
+            second_child.className = "deleteStep"
+            second_child.value = "remove this step";
+            this_step.appendChild(first_child);
+            this_step.appendChild(second_child);
+            document.querySelector("#step_container").appendChild(this_step);
+            markStepNumber()
+        })
+
+
+        $(".finish_button").click(function(){
+            this_recipe.name = $("#recipe_name").val();
+            this_recipe.servingSize = $("#serving_size").val();
+            this_recipe.cooking_tips = $("#cooking_tips").val();
+
+            for(let i = 0; i < $(".step").length; i += 1){
+                this_recipe.steps.push($(".recipe_procedure").eq(i).val());
+            }
+
+            for(let i = 0; i < $(".ingredientName").length; i += 1){
+                this_recipe.ingredients.push($(".ingredientName").eq(i).val());
+            }
+
+            
+            printf("The recipe name is: ", this_recipe.name);
+            printf("The recipe serving size is: ", this_recipe.servingSize);
+           printf("The recipe ingredients are: ", this_recipe.ingredients);
+            printf("The recipe steps are: ", this_recipe.steps);
+            printf("The cooking tips are: ", this_recipe.cooking_tips);
+        })
+
+
+    </script>
+
+
+</body>
+
+
+
+</html>

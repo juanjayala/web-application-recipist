@@ -1,0 +1,38 @@
+{
+  "name": "team43",
+  "version": "1.0.0",
+  "description": "<<<<<<< HEAD <<<<<<< HEAD # team43\r ### This is a raw version of User uploading recipes.  \r ### Without styling\r ### Used jQuery, javascript dom and reactJSX",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "build-run": "cd recipe-app && npm run build && cd .. && node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/csc309-winter-2022/team43.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/csc309-winter-2022/team43/issues"
+  },
+  "homepage": "https://github.com/csc309-winter-2022/team43#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.2",
+    "cloudinary": "^1.29.0",
+    "connect-multiparty": "^2.2.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "express-session": "^1.17.2",
+    "mongoose": "^6.2.9",
+    "validator": "^13.7.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}

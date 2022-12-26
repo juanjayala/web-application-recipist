@@ -1,0 +1,62 @@
+
+
+.step_container{
+    background-color: rgb(195, 224, 252);
+    margin: auto;
+    height: 100em;
+    width: 85%;
+    text-align: center;
+    font-family: "Lucida Handwriting";
+    height: 100em;
+    opacity: 0.9;
+    border-radius: 5em;
+    padding: 5em;
+
+
+}
+
+li{
+    list-style-type: none;
+    margin: auto;
+    margin-top: 3em;
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+    display: inline-block
+}
+
+Form{
+    margin: 3em;
+}
+
+.previous_next_button{
+    margin-right: 5em;
+    margin-left: 5em;
+}
+
+Button{
+    margin-top: 1em;
+}
+
+/* Styles for the file form */
+
+.image-form {
+    text-align: center;
+  }
+  
+  .image-form__field {
+    display: inline-block;
+    padding-right: 20px;
+  }
+  
+  .MuiButton-root.image-form__submit-button {
+    background-color: #457474;
+  }
+  
+  .image-form__message--success {
+    color: green;
+  }
+  
+  .image-form__message--error {
+    color: red;
+  }
+  
