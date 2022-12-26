@@ -1,5 +1,7 @@
 # Web Application - Recipist
 
+Contributors: Kevin Li Chen, Frank Qiao, Riley Morris.
+
 ![image](https://user-images.githubusercontent.com/60584205/209588945-eaeced3c-ecf7-4fb3-936b-d42b2da0e270.png)
 
 
